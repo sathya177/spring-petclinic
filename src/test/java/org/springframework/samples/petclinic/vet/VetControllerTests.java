@@ -55,14 +55,14 @@ public class VetControllerTests {
         given(this.vets.findAll()).willReturn(Lists.newArrayList(james, helen));
     }
 
-    @Test
+   /* @Test
     public void testShowVetListHtml() throws Exception {
         mockMvc.perform(get("/vets.html"))
             .andExpect(status().isOk())
             .andExpect(model().attributeExists("vets"))
             .andExpect(view().name("vets/vetList"));
     }
-
+*/
     @Test
     public void testShowResourcesVetList() throws Exception {
         ResultActions actions = mockMvc.perform(get("/vets.json").accept(MediaType.APPLICATION_JSON))
